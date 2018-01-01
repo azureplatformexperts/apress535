@@ -1,5 +1,4 @@
-Remove-Item -path "C:\inetpub\wwwroot" -Force -Recurse -ErrorAction SilentlyContinue
-New-Item -ItemType directory -Path "C:\inetpub\wwwroot\"
+Remove-Item C:\inetpub\wwwroot\* -Force -Recurse -ErrorAction SilentlyContinue
 $dbsource1 = "https://ifreezwebartifacts.blob.core.windows.net/downloads/default.html"
 $dbsource2 = "https://ifreezwebartifacts.blob.core.windows.net/downloads/ifreezewebsite.gif"
 $dbdestination1 = "C:\inetpub\wwwroot\default.html"
