@@ -1,2 +1,4 @@
 Add-WindowsFeature Web-Server
-Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value $($env:computername)
+$dbsource = "https://ifreezwebartifacts.blob.core.windows.net/downloads/default.html"
+$dbdestination = "C:\inetpub\wwwroot\default.html"
+Invoke-WebRequest $dbsource -OutFile $dbdestination
